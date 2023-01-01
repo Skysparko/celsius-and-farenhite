@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature converter</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Temperature Converter</h1>
+    
+        <button id="F2C" onclick="F2C()" class="btn">Fahrenheit to celsius</button>
+        <button id="C2F" onclick="C2F()" class="btn">Celsius to Fahrenheit</button>
+        <div class="content">    
+            <h2 id="current">Celsius to Fahrenheit:</h2>
+            <h2 id="number">0</h2>
+            <input type="number" id="input"></input>
+            <button type="submit" onclick="convert()">CONVERT</button>
+        </div>
+    </div>
+
+
+    <script>
+        let head = document.getElementById("current");
+        let number = document.getElementById("number");
+        
+        function F2C(){
+            head.innerText="Fahrenheit to Celsius:";
+            
+        }
+        function C2F(){
+            head.innerText="Celsius to Fahrenheit:";
+        }
+        function convert(){
+            var input = document.getElementById("input").value;
+            number.innerText=input;
+
+            if (head.innerText=="Fahrenheit to Celsius:"){
+                number.innerText=((input-32)*5)/9;
+            }
+            else{
+                number.innerText=input*(9/5)+32;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

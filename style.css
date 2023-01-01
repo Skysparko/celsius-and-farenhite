@@ -1,0 +1,23 @@
+body{
+    font-family: 'Baloo Bhai 2', cursive;
+    text-align: center;
+}
+
+.container{
+    
+    border: 2px solid rgb(0, 0, 0);
+    padding: 100px;
+    margin: 20px;
+    
+}
+.content{
+
+}
+
+.btn{
+    font-size: 25px;
+}
+
+
+
+
